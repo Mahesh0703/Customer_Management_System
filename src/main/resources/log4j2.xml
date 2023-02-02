@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+  <Properties>
+    <Property name="LOG_PATTERN">%d{yyyy-MM-dd} [%p] [%m] %n</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT" follow="true">
+      <PatternLayout pattern="${LOG_PATTERN}" />
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.cust_mang_syst" level="trace" additivity="false">
+      <AppenderRef ref="Console" />
+    </Logger>
+    <Root level="off">
+      <AppenderRef ref="Console" />
+    </Root>
+  </Loggers>
+</Configuration>
